@@ -1,4 +1,4 @@
-git"""full_moon URL Configuration
+"""full_moon URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from moon import views as MoonViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', MoonViews.home),
+    path('about/', MoonViews.about),
 ]
